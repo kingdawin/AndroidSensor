@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/selectadapter"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#FFFFFFFF"
+    android:descendantFocusability="blocksDescendants" >
+
+    <TextView
+        android:id="@+id/select_imagebtn_ring_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:textColor="#FF000000"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/select_imagebtn_btn"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/imageview_selector"/>
+
+</RelativeLayout>

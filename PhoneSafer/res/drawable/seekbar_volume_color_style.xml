@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 未拖 -->
+    <item
+        android:id="@android:id/background"
+        android:paddingBottom="3px"
+        android:paddingTop="3px">
+        <shape>
+            <corners android:radius="10dip" />
+            <!-- startColor上部   centerColor中间     endColor底部 -->
+           <gradient
+                android:angle="270"
+                android:centerColor="#6E6E6E"
+                android:centerY="0.45"
+                android:endColor="#0A0A0A"
+                android:startColor="#ffffffff" />
+        </shape>
+    </item>
+    <!-- 拖过的 -->
+    <item
+        android:id="@android:id/progress"
+        android:paddingBottom="3px"
+        android:paddingTop="3px">
+        <clip>
+            <shape>
+
+                <!-- startColor上部   centerColor中间     endColor底部 -->
+                <corners android:radius="10dip" />
+
+                <gradient
+                    android:angle="270"
+                    android:centerColor="#7EC0EE"
+                    android:centerY="0.45"
+                    android:endColor="#FFFFFF"
+                    android:startColor="#7EC0EE" />
+            </shape>
+        </clip>
+    </item>
+    <!--
+    shape是用来定义形状的，gradient定义该形状里面为渐变色填充，
+    startColor起始颜色，endColor结束颜色，angle表示方向角度。当angle=0时，渐变色是从左向右。
+   	  然后逆时针方向转，当angle=90时为从下往上。
+	android:shape 配置的是图形的形式，主要包括方形、圆形等，上边代码为方形。
+	gradient节点主要配置起点颜色、终点颜色、中间点的坐标、中间点的颜色、渐变角度（90度为上下渐变，0为左右渐变），padding节点主要配置上下左右边距，corners节点配置四周园角的半径
+ 
+	gradient   ： 对应颜色渐变。 startcolor、endcolor就不多说了。 android:angle 是指从哪个角度开始变。
+	solid      ：  填充。
+	stroke   ：  描边。
+	corners  ：圆角。
+	padding   ： 定义内容离边界的距离。 与android:padding_left、android:padding_right这些是一个道理。
+    -->
+
+</layer-list>

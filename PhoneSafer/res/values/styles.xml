@@ -1,0 +1,54 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    
+      <style name="OverlayDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!-- 更多设置单项样式 -->
+      <style name="moreSettingItem" >
+        <item name="android:layout_width">200dip</item>
+        <item name="android:layout_height">50.0dip</item>
+        <item name="android:background">@drawable/selector_category_item</item>
+        <item name="android:clickable">true</item>
+        <item name="android:drawableLeft">@drawable/ic_category_mark</item>
+        <item name="android:drawablePadding">1.0dip</item>
+        
+         <item name="android:gravity">center_vertical</item>
+        <item name="android:onClick">clickView</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:paddingRight">10.0dip</item>
+        <item name="android:textColor">#ff959595</item>
+        <item name="android:textSize">16.0sp</item>
+        
+    </style> 
+    
+    <style name="SeekArc">
+        <item name="arcColor">@color/progress_gray_dark</item>
+    </style>
+    
+    <style name="SeekArcLight">
+        <item name="arcColor">@color/progress_gray</item>
+    </style>
+</resources>

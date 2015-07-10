@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 自定义View PieChart的xml属性 -->
+    <declare-styleable name="PieChart">
+
+        <!-- <attr name="showText" format="boolean" /> -->
+        <attr name="labelPosition" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="MyView">
+        <attr name="circleColor" format="color" />
+        <attr name="textSize" format="dimension" />
+    </declare-styleable>
+    
+    <!-- 动态圆环属性 -->
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color" />
+        <attr name="roundProgressColor" format="color" />
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="textColor" format="color" />
+        <attr name="textSize0" format="dimension" />
+        <attr name="max" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+     <attr name="borderRadius" format="dimension" />  
+    <attr name="type">  
+        <enum name="circle" value="0" />  
+        <enum name="round" value="1" />  
+    </attr>  
+    <attr name="src" format="reference"></attr>  
+  
+    <declare-styleable name="CustomImageView">  
+        <attr name="borderRadius" />  
+        <attr name="type" />  
+        <attr name="src" />  
+    </declare-styleable>  
+    <!-- 具有显示加载状态的Button属性 -->
+      <declare-styleable name="CircularProgressButton">
+        <attr name="cpb_selectorIdle" format="reference"/>
+        <attr name="cpb_selectorComplete" format="reference"/>
+        <attr name="cpb_selectorError" format="reference"/>
+        <attr name="cpb_textComplete" format="string"/>
+        <attr name="cpb_textIdle" format="string"/>
+        <attr name="cpb_textError" format="string"/>
+        <attr name="cpb_textProgress" format="string"/>
+        <attr name="cpb_colorProgress" format="color"/>
+        <attr name="cpb_colorIndicator" format="color"/>
+        <attr name="cpb_colorIndicatorBackground" format="color"/>
+        <attr name="cpb_iconError" format="reference"/>
+        <attr name="cpb_iconComplete" format="reference"/>
+        <attr name="cpb_cornerRadius" format="dimension"/>
+        <attr name="cpb_paddingProgress" format="dimension"/>
+    </declare-styleable>
+    
+      
+    <declare-styleable name="SeekArc">
+        <attr name="thumb" format="reference" />
+        <attr name="thumbOffset" format="dimension" />
+        <attr name="max0" format="integer" />
+        <attr name="progressWidth" format="dimension" />
+        <attr name="arcWidth" format="dimension" />
+        <attr name="progress" format="integer" />
+        <attr name="rotation" format="integer" />
+        <attr name="startAngle" format="integer" />
+        <attr name="sweepAngle" format="integer" />
+        <attr name="arcColor" format="color" />
+        <attr name="progressColor" format="color" />
+        <attr name="roundEdges" format="boolean" />
+        <attr name="touchInside" format="boolean" />
+        <attr name="clockwise" format="boolean" />
+    </declare-styleable>
+    
+    <declare-styleable name="SeekArcTheme">
+        <attr name="seekArcStyle" format="reference"></attr>        
+    </declare-styleable>
+</resources>
+<!--
+在布局中使用该属性，示例：
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:custom="http://schemas.android.com/apk/res/com.example.customviews">
+<com.example.customviews.charting.PieChart
+     custom:showText="true"
+     custom:labelPosition="left" />
+</LinearLayout>
+
+注意自定义命名空间和android本身的空间都必须要有。
+-->

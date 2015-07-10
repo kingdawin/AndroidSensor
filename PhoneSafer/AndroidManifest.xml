@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hy2014.phonesafer"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-feature android:name="android.hardware.usb.host" />
+
+    <uses-sdk
+        android:minSdkVersion="12"
+        android:targetSdkVersion="19" /><!-- ==================添加权限=================== -->
+    <!-- 锁屏后CPU不休眠 -->
+    <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
+    <!-- 手机振动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 闪光灯 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> -->
+    <!-- 解锁屏幕 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 读写存储卡 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 在锁屏提示信息 -->
+
+ <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+ 
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher2"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- android:theme="@android:style/Theme.NoTitleBar.Fullscreen" BitmapLoadTest -->
+        <!-- Activity -->
+        <activity
+            android:name="com.hy2014.phonesafer.activity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!-- The following two intent-filters are the key to set homescreen -->
+                <!--
+            <category android:name="android.intent.category.HOME" />
+            <category android:name="android.intent.category.DEFAULT" />
+                -->
+            </intent-filter>
+        </activity>
+        <!-- 铃声浏览和设置 -->
+        <activity android:name="com.hy2014.phonesafer.activity.SettingRingActivity" />
+        <!-- 铃声类型选择 -->
+        <activity android:name="com.hy2014.phonesafer.activity.SelectRingTypeActivity" />
+        <!-- 密码设置 -->
+        <activity android:name="com.hy2014.phonesafer.activity.SettingPasswordActivity" />
+        <!-- 更多设置 -->
+        <activity android:name="com.hy2014.phonesafer.activity.MoreSettingActivity" />
+        <!-- 阀值设置 -->
+        <activity android:name="com.hy2014.phonesafer.activity.SettingXYAngleActivity" />
+        <!-- 手势解锁 -->
+        <activity
+            android:name="com.hy2014.phonesafer.gestureLock.GesturUnlockActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity android:name="com.hy2014.phonesafer.gestureLock.GestureLockSettingActivity" />
+        <!-- <activity android:name="com.hy2014.phonesafer.activity.RotatActivity" /> -->
+        <!-- 设置延迟时间 -->
+        <!-- <activity android:name="com.hy2014.phonesafer.gestureLock.SettingDelayTimeActivity" /> -->
+
+        <activity android:name="com.hy2014.phonesafer.activity.SettingDelayTimeActivity" />
+        <!-- 欢迎界面 -->
+        <activity android:name="com.hy2014.phonesafer.activity.WelcomeActivity" />
+        
+         <activity android:name="com.hy2014.phonesafer.activity.SettingModelActivity" />
+        <!-- Service -->
+         <!--远程服务   android:process=":remote" -->
+        <service android:name="com.hy2014.phonesafer.service.AppService" />
+
+        <!-- 设备管理 -->
+        <receiver
+            android:name="com.hy2014.phonesafer.broadcast.AdminReceiver"
+            android:description="@string/device_des"
+            android:label="@string/device"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/my_admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听音量变化 -->
+       <!--  <receiver android:name="com.hy2014.phonesafer.activity.MediaButtonReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+                监听音量变化
+                <action android:name="android.media.VOLUME_CHANGED_ACTION" />
+            </intent-filter>
+        </receiver> -->
+    </application>
+
+</manifest>

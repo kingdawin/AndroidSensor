@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="时间"
+        android:textColor="@color/cpb_red_dark" />
+
+    <EditText
+        android:id="@+id/edt_password0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="请输入密码来解锁"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:textColor="@color/cpb_blue_dark" />
+
+    <Button
+        android:id="@+id/some_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="确定" />
+
+</LinearLayout>

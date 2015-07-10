@@ -1,0 +1,312 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >    
+    
+
+    <com.hy2014.phonesafer.view.SlideMenu
+        android:id="@+id/slide_menu"
+        android:layout_width="match_parent"      
+        android:layout_height="match_parent" >
+
+        <!-- 菜单界面：更多设置 -->
+        <include layout="@layout/activity_more_setting" />      
+		   
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >		
+			<!-- 警报开关 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+   
+                <ImageView
+                    android:id="@+id/first_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/start" />
+
+                <TextView
+                    android:id="@+id/btn_alarm_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="开启警报"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <com.hy2014.phonesafer.view.CheckSwitchButton
+                    android:id="@+id/mCheckSwithcButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#edecec" />
+            
+            <!-- 振动开关 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/vibrator_remind" />
+
+                <TextView
+                    android:id="@+id/tv_vibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="振动"
+                    android:textColor="#000000"
+                    android:textSize="20sp" >
+                </TextView>
+
+                <com.hy2014.phonesafer.view.CheckSwitchButton
+                    android:id="@+id/mCheckSwithcButton_vibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:enabled="true" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#edecec" />
+
+            <!-- 闪光灯开关 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/light" />
+
+                <TextView
+                    android:id="@+id/tv_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="闪光灯"
+                    android:textColor="#000000"
+                    android:textSize="20sp" >
+                </TextView>
+
+                <com.hy2014.phonesafer.view.CheckSwitchButton
+                    android:id="@+id/mCheckSwithcButton_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:enabled="true" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#edecec" />
+
+            <!-- 手势开关 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/support" />
+
+                <TextView
+                    android:id="@+id/tv_gesture_lock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="手势解锁"
+                    android:textColor="#000000"
+                    android:textSize="20sp" >
+                </TextView>
+
+                <com.hy2014.phonesafer.view.CheckSwitchButton
+                    android:id="@+id/mCheckSwithcButton_gesture_lock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:enabled="true" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#edecec" />
+				
+				<!-- 延迟报警 -->
+				<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/sleep" />
+
+                <TextView
+                    android:id="@+id/tv_delay_alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="延迟报警"
+                    android:textColor="#000000"
+                    android:textSize="20sp" >
+                </TextView>
+
+                <com.hy2014.phonesafer.view.CheckSwitchButton
+                    android:id="@+id/mCheckSwithcButton_delay_alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:enabled="true" />
+            </LinearLayout>
+            
+				  <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#edecec" />
+        
+				  <!-- 声音开关 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/later" />
+
+                <TextView
+                    android:id="@+id/tv_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="声音开关"
+                    android:textColor="#000000"
+                    android:textSize="20sp" >
+                </TextView>
+
+                <com.hy2014.phonesafer.view.CheckSwitchButton
+                    android:id="@+id/mCheckSwithcButton_volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:enabled="true" />
+            </LinearLayout>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#edecec" />
+
+            
+            <!-- 更多设置 -->
+
+            <LinearLayout
+                android:id="@+id/linLayout_more_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="clickView"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/model_select" />
+
+                <TextView
+                    android:id="@+id/tv_more_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="更多设置"
+                    android:textColor="#000000"
+                    android:textSize="20sp" >
+                </TextView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/jian" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#edecec" />
+
+            <!-- <TextView
+                android:id="@+id/tv_op_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"                       
+                android:text="说明"             
+                 /> -->
+            
+            <!-- 提示 -->
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="未启动警报"
+                android:textSize="20sp"                
+                android:textStyle="bold" />
+
+            <com.dd.loadlingButton.CircularProgressButton
+                android:layout_marginTop="10dp"
+                android:id="@+id/cbtn_alarm_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"            
+                android:textColor="@color/cpb_white"
+                android:textSize="18sp"            
+                app:cpb_cornerRadius="48dp"
+                app:cpb_iconComplete="@drawable/img_button_minilyric_unlock_ics"
+                app:cpb_iconError="@drawable/ic_action_cancel"
+                app:cpb_textIdle="@string/alarmswith" />
+        </LinearLayout>
+    </com.hy2014.phonesafer.view.SlideMenu>
+</LinearLayout>

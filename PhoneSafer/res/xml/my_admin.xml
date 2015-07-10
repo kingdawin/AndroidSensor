@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 添加设备管理器权限 -->
+<device-admin xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <uses-policies>
+        <!-- 强行锁定 -->
+        <force-lock />
+        <!-- 清除所有数据（恢复出厂设置） -->
+        <wipe-data />
+        <!-- 重置密码 -->
+        <reset-password />
+        <!-- 限制密码选择 -->
+        <limit-password />
+        <!-- 监控登录尝试 -->
+        <watch-login />
+    </uses-policies>
+
+</device-admin>

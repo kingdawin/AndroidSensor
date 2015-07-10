@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:zhy="http://schemas.android.com/apk/res/com.hy2014.phonesafer"
+    android:layout_width="200dip"
+    android:layout_height="match_parent"
+    android:background="@drawable/bitmap_book_read_chapterlist_repeat"
+    android:orientation="vertical" >
+
+    <com.hy2014.phonesafer.view.CustomImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        zhy:src="@drawable/ic_launcher2"
+        zhy:type="circle" />
+ 
+    <!-- 感应器 --> 
+
+    <!-- <Spinner
+        android:id="@+id/spinner_sensor"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content" /> -->
+    <!-- 连接次数 -->
+
+
+    <!--
+         <Spinner
+        android:id="@+id/spinner_clickCount"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content" />
+    -->
+
+    <Button
+        android:id="@+id/btn_ring_setting"
+        style="@style/moreSettingItem"
+        android:text="声音设置" />
+    <Button
+        android:id="@+id/btn_model_setting"
+        style="@style/moreSettingItem"
+        android:text="模式设置" />
+    
+    <!-- 密码设置 手势设置 -->
+ 
+    <Button
+        android:id="@+id/btn_password_setting"
+        style="@style/moreSettingItem"
+        android:text="手势设置" />
+
+    <!-- <Button
+        android:id="@+id/btn_password_lock_sys"
+        style="@style/moreSettingItem"
+        android:text="锁屏密码" /> -->
+ <Button
+        android:id="@+id/btn_delay_time_setting"
+        style="@style/moreSettingItem"
+        android:text="延迟设置" />
+    <Button
+        android:id="@+id/btn_speed_value_setting"
+        style="@style/moreSettingItem"
+        android:text="重力感应设置" />
+
+   
+
+    
+
+</LinearLayout>
