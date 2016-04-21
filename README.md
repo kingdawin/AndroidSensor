@@ -1,3 +1,6 @@
+use sensor to protect your phone not rob:
+ACCELEROMETER-Sensor ,PROXIMIY-sensor, LIGHT-sensor
+
 # 项目功能
 - 设置系统铃声作为报警音、提示音
 - 手势解锁
